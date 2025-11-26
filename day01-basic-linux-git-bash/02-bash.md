@@ -1026,7 +1026,7 @@ done
 
 # For loop - range
 for i in {1..5}; do
-    echo "Number: $i
+    echo "Number: $i"
 done
 
 # For loop - C-style
