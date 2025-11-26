@@ -1,5 +1,170 @@
 # Complete Git & GitHub Learning Guide
 
+---
+
+## Table of Contents
+
+- [Chapter 1: Introduction to Version Control](#chapter-1-introduction-to-version-control)
+  - [1.1 What is Git?](#11-what-is-git)
+    - Benefits and use cases
+    - Real-world scenario
+  - [1.2 Git vs GitHub](#12-git-vs-github)
+    - Understanding the difference
+
+---
+
+- [Chapter 2: Setting Up Git](#chapter-2-setting-up-git)
+  - [2.1 Installing Git](#21-installing-git)
+    - Windows installation
+    - Mac installation
+    - Linux installation
+  - [2.2 Configuring Git](#22-configuring-git-first-time-setup)
+    - User identity setup
+    - Default branch configuration
+    - Viewing configurations
+  - [2.3 Getting Help](#23-getting-help)
+
+---
+
+- [Chapter 3: Taking Snapshots (Basic Workflow)](#chapter-3-taking-snapshots-basic-workflow)
+  - [3.1 Initializing a Repository](#31-initializing-a-repository)
+  - [3.2 Understanding the Git Workflow](#32-understanding-the-git-workflow)
+    - Three main areas
+    - Workflow visualization
+  - [3.3 Staging Files](#33-staging-files)
+    - git add commands
+    - Example workflow
+  - [3.4 Committing Changes](#34-committing-changes)
+    - Basic commit
+    - Commit message best practices
+    - Multi-line messages
+  - [3.5 Skipping the Staging Area](#35-skipping-the-staging-area)
+  - [3.6 Viewing History](#36-viewing-history)
+    - git log variations
+    - Example output
+
+---
+
+- [Chapter 4: Managing Files](#chapter-4-managing-files)
+  - [4.1 Removing Files](#41-removing-files)
+    - git rm commands
+    - Scenario examples
+  - [4.2 Renaming/Moving Files](#42-renamingmoving-files)
+  - [4.3 Ignoring Files](#43-ignoring-files)
+    - .gitignore file
+    - Common patterns
+
+---
+
+- [Chapter 5: Viewing Changes](#chapter-5-viewing-changes)
+  - [5.1 Checking Status](#51-checking-status)
+    - git status commands
+    - Short status output
+  - [5.2 Viewing Differences](#52-viewing-differences)
+    - git diff commands
+    - Example scenarios
+  - [5.3 Viewing Specific Commits](#53-viewing-specific-commits)
+
+---
+
+- [Chapter 6: Undoing Changes](#chapter-6-undoing-changes)
+  - [6.1 Unstaging Files](#61-unstaging-files)
+    - git restore --staged
+    - Scenario examples
+  - [6.2 Discarding Local Changes](#62-discarding-local-changes)
+    - Warning about data loss
+  - [6.3 Restoring Files to Earlier Versions](#63-restoring-files-to-earlier-versions)
+  - [6.4 Using Git Reset](#64-using-git-reset)
+    - Three reset modes
+    - Example workflow
+
+---
+
+- [Chapter 7: Branching and Merging](#chapter-7-branching-and-merging)
+  - [7.1 Understanding Branches](#71-understanding-branches)
+    - Branch commands
+    - E-commerce scenario
+  - [7.2 Branch Workflow](#72-branch-workflow)
+  - [7.3 Merging Branches](#73-merging-branches)
+    - Fast-Forward Merge
+    - Three-Way Merge
+    - Visualizations
+  - [7.4 Handling Merge Conflicts](#74-handling-merge-conflicts)
+    - Conflict scenario
+    - Resolving conflicts
+  - [7.5 Deleting Branches](#75-deleting-branches)
+
+---
+
+- [Chapter 8: Git Stash](#chapter-8-git-stash)
+  - [8.1 What is Stash?](#81-what-is-stash)
+    - Real-world scenario
+  - [8.2 Stash Commands](#82-stash-commands)
+    - Basic stash operations
+    - Stash list management
+  - [8.3 Advanced Stash Usage](#83-advanced-stash-usage)
+
+---
+
+- [Chapter 9: Working with Remote Repositories](#chapter-9-working-with-remote-repositories)
+  - [9.1 Connecting to GitHub](#91-connecting-to-github)
+    - Remote commands
+  - [9.2 Pushing to Remote](#92-pushing-to-remote)
+    - Push commands
+    - Collaborative scenario
+  - [9.3 Fetching and Pulling](#93-fetching-and-pulling)
+    - Fetch vs Pull
+    - Commands and differences
+  - [9.4 Cloning Repositories](#94-cloning-repositories)
+    - Clone options
+
+---
+
+- [Chapter 10: Collaboration Workflows](#chapter-10-collaboration-workflows)
+  - [10.1 Feature Branch Workflow](#101-feature-branch-workflow)
+    - Complete workflow steps
+  - [10.2 Handling Pull Requests](#102-handling-pull-requests)
+    - Team workflow example
+  - [10.3 Resolving Conflicts in Collaboration](#103-resolving-conflicts-in-collaboration)
+
+---
+
+- [Chapter 11: Advanced Git Techniques](#chapter-11-advanced-git-techniques)
+  - [11.1 Cherry-Picking](#111-cherry-picking)
+  - [11.2 Rebasing](#112-rebasing)
+    - Warning about shared branches
+  - [11.3 Git Aliases](#113-git-aliases)
+    - Setting up shortcuts
+
+---
+
+- [Chapter 12: Git Best Practices](#chapter-12-git-best-practices)
+  - [12.1 Commit Guidelines](#121-commit-guidelines)
+    - DO's and DON'Ts
+  - [12.2 Branch Naming Conventions](#122-branch-naming-conventions)
+    - Good vs bad names
+  - [12.3 Security Practices](#123-security-practices)
+    - Preventing secret commits
+
+---
+
+- [Chapter 13: Troubleshooting Common Issues](#chapter-13-troubleshooting-common-issues)
+  - [13.1 "Detached HEAD" State](#131-detached-head-state)
+  - [13.2 Undoing a Pushed Commit](#132-undoing-a-pushed-commit)
+  - [13.3 Recovering Deleted Commits](#133-recovering-deleted-commits)
+
+---
+
+- [Quick Reference Cheat Sheet](#quick-reference-cheat-sheet)
+  - Setup commands
+  - Basic commands
+  - Branching
+  - Remote operations
+  - Undoing changes
+  - Stash commands
+
+---
+
 ## Chapter 1: Introduction to Version Control
 
 ### 1.1 What is Git?

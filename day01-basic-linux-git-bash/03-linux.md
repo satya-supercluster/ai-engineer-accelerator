@@ -1,5 +1,270 @@
 # Complete Linux Learning Guide
 
+---
+
+## Table of Contents
+
+- [Chapter 1: Introduction to Linux](#chapter-1-introduction-to-linux)
+  - [1.1 What is Linux?](#11-what-is-linux)
+    - Real-world analogy
+  - [1.2 Why Learn Linux?](#12-why-learn-linux)
+    - Career opportunities
+    - Key benefits
+  - [1.3 Linux Distributions (Distros)](#13-linux-distributions-distros)
+    - Beginner-friendly distros
+    - Advanced distros
+    - Server-focused distros
+  - [1.4 Linux Architecture](#14-linux-architecture)
+    - System layers diagram
+
+---
+
+- [Chapter 2: Getting Started with Linux](#chapter-2-getting-started-with-linux)
+  - [2.1 Installation Options](#21-installation-options)
+    - Virtual Machine (Option 1)
+    - Dual Boot (Option 2)
+    - WSL - Windows Subsystem for Linux (Option 3)
+    - Cloud Linux (Option 4)
+  - [2.2 First Login](#22-first-login)
+    - Understanding the prompt
+  - [2.3 Basic Command Structure](#23-basic-command-structure)
+
+---
+
+- [Chapter 3: Navigating the File System](#chapter-3-navigating-the-file-system)
+  - [3.1 Linux Directory Structure](#31-linux-directory-structure)
+    - File system hierarchy
+    - Windows vs Linux paths
+  - [3.2 Essential Navigation Commands](#32-essential-navigation-commands)
+    - pwd, ls, cd commands
+    - Practical scenarios
+  - [3.3 Understanding Paths](#33-understanding-paths)
+    - Absolute vs relative paths
+    - Special shortcuts
+    - Example workflows
+
+---
+
+- [Chapter 4: Working with Files and Directories](#chapter-4-working-with-files-and-directories)
+  - [4.1 Creating Files and Directories](#41-creating-files-and-directories)
+    - touch and mkdir commands
+    - Web project setup example
+  - [4.2 Viewing File Contents](#42-viewing-file-contents)
+    - cat, head, tail, less, more
+    - Practical examples
+  - [4.3 Copying Files and Directories](#43-copying-files-and-directories)
+    - cp command variations
+    - Backup scenarios
+  - [4.4 Moving and Renaming](#44-moving-and-renaming)
+    - mv command
+    - Example workflows
+  - [4.5 Deleting Files and Directories](#45-deleting-files-and-directories)
+    - rm command
+    - Safety tips (IMPORTANT)
+    - Practical scenarios
+
+---
+
+- [Chapter 5: File Permissions and Ownership](#chapter-5-file-permissions-and-ownership)
+  - [5.1 Understanding Permissions](#51-understanding-permissions)
+    - Permission structure breakdown
+    - Permission types and values
+  - [5.2 Changing Permissions (chmod)](#52-changing-permissions-chmod)
+    - Symbolic method
+    - Numeric method
+    - Common permission patterns
+    - Real-world scenarios
+  - [5.3 Changing Ownership (chown)](#53-changing-ownership-chown)
+    - Owner and group changes
+    - Practical scenarios
+  - [5.4 Special Permissions](#54-special-permissions)
+    - Setuid, Setgid, Sticky bit
+    - Understanding examples
+
+---
+
+- [Chapter 6: Text Processing and Searching](#chapter-6-text-processing-and-searching)
+  - [6.1 Searching for Files (find)](#61-searching-for-files-find)
+    - Find by name, type, size
+    - Find by time
+    - Execute commands on results
+    - Real-world examples
+  - [6.2 Searching File Contents (grep)](#62-searching-file-contents-grep)
+    - Basic grep
+    - Advanced options
+    - Practical scenarios
+  - [6.3 Text Stream Processing](#63-text-stream-processing)
+    - cat - Display and concatenate
+    - sort - Sort lines
+    - uniq - Remove duplicates
+    - wc - Word count
+    - cut - Extract columns
+    - tr - Translate characters
+    - Real-world pipelines
+
+---
+
+- [Chapter 7: Redirection and Pipes](#chapter-7-redirection-and-pipes)
+  - [7.1 Understanding Streams](#71-understanding-streams)
+    - stdin, stdout, stderr
+  - [7.2 Output Redirection](#72-output-redirection)
+    - Redirect and append
+    - Error redirection
+    - Practical examples
+  - [7.3 Input Redirection](#73-input-redirection)
+    - Here documents
+  - [7.4 Pipes (|)](#74-pipes)
+    - Basic and complex pipelines
+    - Real-world examples
+  - [7.5 tee Command](#75-tee-command)
+
+---
+
+- [Chapter 8: Process Management](#chapter-8-process-management)
+  - [8.1 Viewing Processes](#81-viewing-processes)
+    - ps commands
+    - top and htop
+    - Understanding ps output
+  - [8.2 Managing Processes](#82-managing-processes)
+    - Background and foreground jobs
+    - Example workflow
+  - [8.3 Killing Processes](#83-killing-processes)
+    - kill commands
+    - Common signals
+    - Real-world scenarios
+  - [8.4 Process Priority (nice and renice)](#84-process-priority-nice-and-renice)
+    - Priority ranges
+    - Practical examples
+  - [8.5 nohup and screen](#85-nohup-and-screen)
+    - nohup command
+    - screen multiplexer
+    - tmux alternative
+    - Real-world usage
+
+---
+
+- [Chapter 9: Package Management](#chapter-9-package-management)
+  - [9.1 APT (Debian/Ubuntu)](#91-apt-debianubuntu)
+    - Update, install, remove commands
+    - Practical scenarios
+  - [9.2 YUM/DNF (RedHat/CentOS/Fedora)](#92-yumdnf-redhatcentosfedora)
+  - [9.3 Snap (Universal packages)](#93-snap-universal-packages)
+  - [9.4 Downloading and Installing from Source](#94-downloading-and-installing-from-source)
+
+---
+
+- [Chapter 10: User and Group Management](#chapter-10-user-and-group-management)
+  - [10.1 User Management](#101-user-management)
+    - Adding and deleting users
+    - Password management
+    - User modification
+    - Real-world scenarios
+  - [10.2 Group Management](#102-group-management)
+    - Creating and managing groups
+    - Shared project example
+  - [10.3 Sudo and Root Access](#103-sudo-and-root-access)
+    - Sudo commands
+    - Sudoers configuration
+
+---
+
+- [Chapter 11: Networking Basics](#chapter-11-networking-basics)
+  - [11.1 Network Configuration](#111-network-configuration)
+    - View IP and interfaces
+    - Test connectivity
+    - DNS lookup
+    - Practical examples
+  - [11.2 Firewall (ufw)](#112-firewall-ufw)
+    - Enable and configure
+    - Common web server setup
+  - [11.3 SSH (Secure Shell)](#113-ssh-secure-shell)
+    - Connect to remote servers
+    - File transfer (scp)
+    - SSH keys setup
+    - SSH config file
+
+---
+
+- [Chapter 12: System Monitoring and Logs](#chapter-12-system-monitoring-and-logs)
+  - [12.1 System Information](#121-system-information)
+    - CPU, memory, disk info
+    - Hardware information
+  - [12.2 System Monitoring](#122-system-monitoring)
+    - Real-time monitoring tools
+    - Monitoring script example
+  - [12.3 Log Files](#123-log-files)
+    - Important log locations
+    - Viewing logs
+    - Log analysis examples
+
+---
+
+- [Chapter 13: Bash Scripting Basics](#chapter-13-bash-scripting-basics)
+  - [13.1 Creating Your First Script](#131-creating-your-first-script)
+  - [13.2 Variables](#132-variables)
+    - String and number variables
+    - Command substitution
+    - User input
+  - [13.3 Conditionals](#133-conditionals)
+    - If-else statements
+    - Comparison operators
+    - File checks
+  - [13.4 Loops](#134-loops)
+    - For loops
+    - While loops
+  - [13.5 Functions](#135-functions)
+    - Function definition
+    - Parameters and return values
+  - [13.6 Practical Script Examples](#136-practical-script-examples)
+    - Backup script
+    - System monitor script
+    - Deployment script
+
+---
+
+- [Chapter 14: Automation with Cron](#chapter-14-automation-with-cron)
+  - [14.1 Understanding Cron](#141-understanding-cron)
+    - Cron syntax explained
+  - [14.2 Managing Cron Jobs](#142-managing-cron-jobs)
+    - crontab commands
+  - [14.3 Cron Examples](#143-cron-examples)
+    - Common schedules
+    - Practical cron jobs
+  - [14.4 Anacron](#144-anacron)
+
+---
+
+- [Chapter 15: Best Practices and Tips](#chapter-15-best-practices-and-tips)
+  - [15.1 Security Best Practices](#151-security-best-practices)
+    - System updates
+    - Password management
+    - SSH security
+    - Firewall setup
+  - [15.2 Performance Tips](#152-performance-tips)
+    - Cleaning system
+    - Resource optimization
+  - [15.3 Useful Aliases](#153-useful-aliases)
+    - Common aliases
+    - Applying changes
+
+---
+
+- [Quick Reference Cheat Sheet](#quick-reference-cheat-sheet)
+  - File Operations
+  - File Viewing
+  - File Permissions
+  - Search Commands
+  - Process Management
+  - Network Commands
+  - Package Management
+  - System Information
+  - User Management
+  - File Compression
+  - Text Processing
+  - Redirection
+
+---
+
 ## Chapter 1: Introduction to Linux
 
 ### 1.1 What is Linux?

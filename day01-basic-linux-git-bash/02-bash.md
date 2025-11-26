@@ -4,6 +4,256 @@
 
 ---
 
+## Table of Contents
+
+- [Chapter 1: Introduction to Bash and Shell](#chapter-1-introduction-to-bash-and-shell)
+  - [1.1 What is Bash?](#11-what-is-bash)
+    - Why learn Bash for enterprise work
+    - Real-world scenario
+  - [1.2 Shell vs Terminal vs Console](#12-shell-vs-terminal-vs-console)
+    - Checking your shell
+    - Shell types
+  - [1.3 Types of Shells](#13-types-of-shells)
+
+---
+
+- [Chapter 2: Essential Command Line Navigation](#chapter-2-essential-command-line-navigation)
+  - [2.1 File System Structure](#21-file-system-structure)
+    - Linux/Unix hierarchy
+  - [2.2 Navigation Commands](#22-navigation-commands)
+    - pwd, ls variations
+    - cd commands
+    - mkdir with options
+    - Enterprise scenario
+  - [2.3 File Operations](#23-file-operations)
+    - Creating files (touch)
+    - Copying (cp variations)
+    - Moving/Renaming (mv)
+    - Deleting (rm)
+    - Viewing contents (cat, less, more, head, tail)
+    - Real-world examples
+
+---
+
+- [Chapter 3: Text Processing and Manipulation](#chapter-3-text-processing-and-manipulation)
+  - [3.1 Grep - Search Text](#31-grep---search-text)
+    - Basic grep
+    - Advanced patterns
+    - Enterprise scenarios
+  - [3.2 Awk - Pattern Scanning and Processing](#32-awk---pattern-scanning-and-processing)
+    - Basic awk
+    - Conditional processing
+    - Calculations
+    - Enterprise examples
+  - [3.3 Sed - Stream Editor](#33-sed---stream-editor)
+    - Substitution
+    - Delete lines
+    - Insert and append
+    - Production use cases
+  - [3.4 Cut - Extract Sections](#34-cut---extract-sections)
+  - [3.5 Sort and Uniq](#35-sort-and-uniq)
+    - Sorting options
+    - Removing duplicates
+    - Enterprise scenarios
+
+---
+
+- [Chapter 4: Redirection and Pipes](#chapter-4-redirection-and-pipes)
+  - [4.1 Input/Output Redirection](#41-inputoutput-redirection)
+    - Output redirection (>, >>)
+    - Error redirection (2>)
+    - Combined redirection
+  - [4.2 Pipes](#42-pipes)
+    - Basic pipes
+    - Chaining commands
+    - Real-world pipelines
+  - [4.3 Tee Command](#43-tee-command)
+
+---
+
+- [Chapter 5: Process Management](#chapter-5-process-management)
+  - [5.1 Viewing Processes](#51-viewing-processes)
+    - ps commands
+    - top and htop
+    - Process tree
+  - [5.2 Managing Processes](#52-managing-processes)
+    - Foreground and background
+    - kill commands
+    - Priority control (nice, renice)
+    - Common signals
+    - Enterprise scenarios
+  - [5.3 System Monitoring](#53-system-monitoring)
+    - CPU and memory
+    - Disk usage
+    - Network monitoring
+    - Load average explained
+
+---
+
+- [Chapter 6: File Permissions and Ownership](#chapter-6-file-permissions-and-ownership)
+  - [6.1 Understanding Permissions](#61-understanding-permissions)
+    - Permission structure
+    - Permission types and values
+  - [6.2 Changing Permissions](#62-changing-permissions)
+    - Symbolic mode (chmod)
+    - Numeric mode
+    - Common permission sets
+    - Enterprise scenarios
+  - [6.3 Changing Ownership](#63-changing-ownership)
+    - chown and chgrp
+    - Practical scenarios
+  - [6.4 Special Permissions](#64-special-permissions)
+    - Sticky bit
+    - SetGID
+    - SetUID
+
+---
+
+- [Chapter 7: Environment Variables](#chapter-7-environment-variables)
+  - [7.1 Understanding Environment Variables](#71-understanding-environment-variables)
+    - Common variables
+  - [7.2 Setting Variables](#72-setting-variables)
+    - Local vs environment
+    - export command
+  - [7.3 PATH Management](#73-path-management)
+  - [7.4 Configuration Files](#74-configuration-files)
+    - System-wide configs
+    - User-specific configs
+    - Best practice configuration
+
+---
+
+- [Chapter 8: Bash Scripting Fundamentals](#chapter-8-bash-scripting-fundamentals)
+  - [8.1 Your First Script](#81-your-first-script)
+  - [8.2 Variables](#82-variables)
+    - Assignment and usage
+    - Command substitution
+    - Reading input
+  - [8.3 Command-Line Arguments](#83-command-line-arguments)
+    - Special variables
+    - Practical examples
+  - [8.4 Conditionals](#84-conditionals)
+    - If-else statements
+    - String comparisons
+    - Numeric comparisons
+    - File tests
+    - Logical operators
+    - Real-world examples
+  - [8.5 Loops](#85-loops)
+    - For loops (various types)
+    - While loops
+    - Until loops
+    - Break and continue
+    - Enterprise examples
+  - [8.6 Functions](#86-functions)
+    - Basic functions
+    - Parameters and return values
+    - Enterprise function library
+  - [8.7 Arrays](#87-arrays)
+    - Declaration and access
+    - Iteration
+    - Associative arrays
+    - Real-world examples
+
+---
+
+- [Chapter 9: Advanced Bash Scripting](#chapter-9-advanced-bash-scripting)
+  - [9.1 Error Handling](#91-error-handling)
+    - set options
+    - trap command
+    - Production-ready error handling
+  - [9.2 Debugging](#92-debugging)
+    - Debug modes
+    - Conditional debugging
+  - [9.3 Options Parsing](#93-options-parsing)
+    - Manual parsing
+    - getopts usage
+  - [9.4 Working with JSON](#94-working-with-json)
+    - Using jq
+    - Real-world API interaction
+  - [9.5 Parallel Execution](#95-parallel-execution)
+    - Background jobs
+    - GNU Parallel
+    - Parallel deployment example
+
+---
+
+- [Chapter 10: System Administration Tasks](#chapter-10-system-administration-tasks)
+  - [10.1 User Management](#101-user-management)
+    - Adding/deleting users
+    - Password management
+    - Automated provisioning
+  - [10.2 Service Management (systemd)](#102-service-management-systemd)
+    - systemctl commands
+    - Creating custom services
+  - [10.3 Cron Jobs](#103-cron-jobs)
+    - Crontab syntax
+    - Examples
+    - Production cron jobs
+  - [10.4 Log Management](#104-log-management)
+    - Viewing logs
+    - Log rotation
+    - Analysis scripts
+  - [10.5 Disk and File System Management](#105-disk-and-file-system-management)
+    - Disk usage commands
+    - Finding large files
+    - Automated cleanup
+
+---
+
+- [Chapter 11: Networking and Remote Operations](#chapter-11-networking-and-remote-operations)
+  - [11.1 Network Commands](#111-network-commands)
+    - Interface management
+    - Connectivity testing
+    - DNS lookup
+    - Network statistics
+    - Network monitoring script
+  - [11.2 SSH (Secure Shell)](#112-ssh-secure-shell)
+    - Connection commands
+    - File transfer (scp, rsync)
+    - SSH keys
+    - SSH config
+    - Automated deployment
+  - [11.3 Firewall Management](#113-firewall-management-ufwiptables)
+    - UFW commands
+    - iptables basics
+
+---
+
+- [Chapter 12: Docker and Containers](#chapter-12-docker-and-containers)
+  - [12.1 Docker Basics](#121-docker-basics)
+    - Container management
+    - Image management
+    - Docker cleanup script
+  - [12.2 Docker Compose](#122-docker-compose)
+    - docker-compose.yml
+    - Commands
+    - Deployment script
+
+---
+
+- [Chapter 13: Enterprise Bash Patterns](#chapter-13-enterprise-bash-patterns)
+  - [13.1 Configuration Management](#131-configuration-management)
+  - [13.2 Secrets Management](#132-secrets-management)
+  - [13.3 Logging Framework](#133-logging-framework)
+  - [13.4 Health Check Framework](#134-health-check-framework)
+
+---
+
+- [Chapter 14: Performance and Optimization](#chapter-14-performance-and-optimization)
+  - [14.1 Script Performance](#141-script-performance)
+  - [14.2 Optimization Techniques](#142-optimization-techniques)
+
+---
+
+- [Chapter 15: Quick Reference & Best Practices](#chapter-15-quick-reference--best-practices)
+  - [15.1 Bash Scripting Best Practices](#151-bash-scripting-best-practices)
+  - [15.2 Common Pitfalls](#152-common-pitfalls)
+  - [15.3 Essential One-Liners](#153-essential-one-liners)
+  - [15.4 Bash Scripting Cheat Sheet](#154-bash-scripting-cheat-sheet)
+
+---
+
 ## Chapter 1: Introduction to Bash and Shell
 
 ### 1.1 What is Bash?
