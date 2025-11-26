@@ -1,0 +1,10 @@
+Problem 49: Validation Layer with Custom Exceptions
+
+Description:
+Design a validation layer that validates incoming DTOs and throws custom exceptions like ValidationException with error codes. Organize validators, exceptions, and models in separate packages.
+
+Sample Input:
+UserDto with empty name and invalid email
+
+Sample Output:
+ValidationException with messages about name and email.

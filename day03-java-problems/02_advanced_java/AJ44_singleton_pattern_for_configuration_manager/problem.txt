@@ -1,0 +1,10 @@
+Problem 44: Singleton Pattern for Configuration Manager
+
+Description:
+Implement a thread-safe Singleton for a ConfigurationManager that loads properties once and provides getters. Show different singleton implementations (eager, lazy with double-checked locking) in separate classes.
+
+Sample Input:
+Access config from multiple parts of code
+
+Sample Output:
+ConfigurationManager instance reused everywhere.

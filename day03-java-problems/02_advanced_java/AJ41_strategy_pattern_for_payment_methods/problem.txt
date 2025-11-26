@@ -1,0 +1,10 @@
+Problem 41: Strategy Pattern for Payment Methods
+
+Description:
+Design a folder structure implementing the Strategy pattern for different payment methods (CreditCardPayment, UpiPayment, NetBankingPayment). The client should be able to switch strategies at runtime. Create interfaces and concrete strategies in separate files. Demonstrate usage in a main class.
+
+Sample Input:
+Select payment strategy: card, upi, or netbanking; amount=1000
+
+Sample Output:
+Processing 1000 via selected payment strategy.

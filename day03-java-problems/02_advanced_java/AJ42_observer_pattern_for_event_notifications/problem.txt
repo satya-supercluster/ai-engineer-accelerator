@@ -1,0 +1,11 @@
+        Problem 42: Observer Pattern for Event Notifications
+
+        Description:
+        Design classes for an Observer pattern where a Subject (e.g., Order) notifies observers (EmailNotifier, SmsNotifier) on state changes (CREATED, SHIPPED, DELIVERED). Place interfaces and implementations in appropriate subpackages.
+
+        Sample Input:
+        Order status changes from CREATED to SHIPPED
+
+        Sample Output:
+        Email sent: Your order is shipped.
+SMS sent: Your order is shipped.

@@ -1,0 +1,10 @@
+Problem 48: DTO and Mapper Pattern for API Layer
+
+Description:
+Create domain entities and DTOs (Data Transfer Objects) and implement a mapper class to convert between them. Organize entities, DTOs, and mappers in separate folders. Focus on immutability and null-safety.
+
+Sample Input:
+UserEntity{id=1, name='Alice'}
+
+Sample Output:
+UserDto{id=1, fullName='Alice'}

@@ -1,0 +1,10 @@
+Problem 43: Factory Method for Creating Cloud Clients
+
+Description:
+Implement the Factory Method pattern to create different CloudClient implementations (AwsClient, AzureClient, GcpClient) based on a configuration or input. Organize interfaces, concrete classes, and factory in a clear package structure.
+
+Sample Input:
+cloud=aws
+
+Sample Output:
+Using AwsClient to perform cloud operation.

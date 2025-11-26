@@ -1,0 +1,10 @@
+Problem 50: Layered Architecture Mini-Skeleton
+
+Description:
+Create a mini layered architecture skeleton with packages: controller, service, repository, model. Implement simple method flow (controller -> service -> repository) without any framework, using plain Java classes. Include a main class to demonstrate a use case.
+
+Sample Input:
+Call controller.createUser('Alice')
+
+Sample Output:
+User created via service and repository layers.

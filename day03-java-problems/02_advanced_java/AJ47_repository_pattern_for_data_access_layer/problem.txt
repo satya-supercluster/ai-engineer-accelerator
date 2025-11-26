@@ -1,0 +1,10 @@
+Problem 47: Repository Pattern for Data Access Layer
+
+Description:
+Design a simple repository interface for a User entity and create an in-memory implementation. Organize domain model, repository interface, and implementation classes in different packages to mimic a layered architecture.
+
+Sample Input:
+Save user, findById, findAll
+
+Sample Output:
+Users retrieved from in-memory store.

@@ -1,0 +1,10 @@
+Problem 46: Adapter Pattern for Logging APIs
+
+Description:
+You have an existing Logger interface but need to integrate with a third-party logging library that has a different API. Use Adapter pattern to bridge them. Create adapter classes in their own package.
+
+Sample Input:
+Call oldLogger.logInfo('Hello')
+
+Sample Output:
+Underlying third-party logger receives appropriate call.

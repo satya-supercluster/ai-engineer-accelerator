@@ -1,0 +1,10 @@
+Problem 45: Builder Pattern for Complex Request Objects
+
+Description:
+Use the Builder pattern to construct a complex HttpRequest object with many optional fields (headers, query params, body). Organize builder and main class in separate files.
+
+Sample Input:
+Build GET request with header X-Request-Id and query param page=1
+
+Sample Output:
+HttpRequest{method=GET, url='...', headers=..., queryParams=...}
