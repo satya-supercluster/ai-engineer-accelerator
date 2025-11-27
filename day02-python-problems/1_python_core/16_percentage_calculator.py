@@ -13,3 +13,7 @@ Expected Output:
 """
 
 # Your solution here
+completed = 45
+total = 100
+percentage = (completed / total) * 100
+print(f"{percentage}%")

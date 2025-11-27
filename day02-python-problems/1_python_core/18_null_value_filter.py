@@ -13,3 +13,15 @@ Expected Output:
 """
 
 # Your solution here
+def filter_null_values(data):
+    """Remove None/null values from a list or dictionary."""
+    if isinstance(data, list):
+        return [item for item in data if item is not None]
+    elif isinstance(data, dict):
+        return {key: value for key, value in data.items() if value is not None}
+    return data
+
+
+# Test with sample input
+sample_input = [1, None, 2, None, 3]
+print(filter_null_values(sample_input))

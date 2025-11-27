@@ -13,3 +13,13 @@ Expected Output:
 """
 
 # Your solution here
+def build_default_dict(keys, default):
+    """Build a dictionary with default values for all keys."""
+    return {key: default for key in keys}
+
+
+# Test with sample input
+keys = ['model', 'temperature']
+default = 'unknown'
+result = build_default_dict(keys, default)
+print(result)

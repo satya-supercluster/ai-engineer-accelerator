@@ -12,4 +12,23 @@ Expected Output:
 'Very long text...'
 """
 
-# Your solution here
+def truncate_text(text, max_length):
+    """
+    Truncate text to maximum length with ellipsis.
+    
+    Args:
+        text: The string to truncate
+        max_length: Maximum length of the result including ellipsis
+    
+    Returns:
+        Truncated string with ellipsis if needed
+    """
+    if len(text) <= max_length:
+        return text
+    return text[:max_length - 3] + '...'
+
+
+# Test
+text = 'Very long text that needs truncation'
+max_length = 20
+print(truncate_text(text, max_length))
