@@ -1,3 +1,5 @@
+from datetime import datetime
+
 """
 Problem 10: Timestamp Logger
 
@@ -13,3 +15,11 @@ Expected Output:
 """
 
 # Your solution here
+def timestamp_logger(message):
+    """Add timestamp to log message."""
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    return f"{timestamp} - {message}"
+
+# Test
+message = 'Processing request'
+print(timestamp_logger(message))
